@@ -1,0 +1,39 @@
+
+#include <stdio.h>
+
+// Function prototypes
+double add(double num1, double num2);
+double subtract(double num1, double num2);
+
+int main() {
+    // Declare variables
+    double num1, num2, sum, difference;
+
+    // Input first number
+    printf("Enter the first number: ");
+    scanf("%lf", &num1);
+
+    // Input second number
+    printf("Enter the second number: ");
+    scanf("%lf", &num2);
+
+    // Call the functions to perform operations
+    sum = add(num1, num2);
+    difference = subtract(num1, num2);
+
+    // Display the results
+    printf("Sum: %.2lf\n", sum);
+    printf("Difference: %.2lf\n", difference);
+
+    return 0;
+}
+
+// Function to add two numbers
+double add(double num1, double num2) {
+    return num1 + num2;
+}
+
+// Function to subtract the second number from the first
+double subtract(double num1, double num2) {
+    return num1 - num2;
+}
