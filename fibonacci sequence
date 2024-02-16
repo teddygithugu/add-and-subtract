@@ -1,0 +1,33 @@
+
+#include <stdio.h>
+
+// Function to generate Fibonacci series up to n
+void generateFibonacci(int n) {
+    int first = 0, second = 1, next;
+
+    printf("Fibonacci Series up to %d: ", n);
+
+    while (first <= n) {
+        printf("%d, ", first);
+
+        next = first + second;
+        first = second;
+        second = next;
+    }
+
+    printf("\n");
+}
+
+int main() {
+    // Declare variable
+    int num;
+
+    // Input the value of n
+    printf("Enter a number (n) to generate Fibonacci series up to: ");
+    scanf("%d", &num);
+
+    // Call the function to generate Fibonacci series
+    generateFibonacci(num);
+
+    return 0;
+}
